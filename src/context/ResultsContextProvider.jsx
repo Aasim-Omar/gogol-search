@@ -5,7 +5,8 @@ const ResultsContext = createContext()
 export const ResultsContextProvider = ({ children }) => {
   let [results, setResults] = useState([])
   let [searchTerm, setSearchTerm] = useState("")
-  let [isLoading, setIsLoading] = useState(true)
+  let [isLoading, setIsLoading] = useState(false)
+  let [darkTheme, setDarkTheme] = useState(false)
 
   const baseUrl = 'https://google-search3.p.rapidapi.com/api/v1'
   const getResults = async (query) => {
@@ -26,7 +27,7 @@ export const ResultsContextProvider = ({ children }) => {
 
   return (
     <ResultsContext.Provider
-      value={{results, getResults, setResults, searchTerm, setSearchTerm, isLoading, setIsLoading}}
+      value={{results, getResults, setResults, searchTerm, setSearchTerm, isLoading, setIsLoading, darkTheme, setDarkTheme }}
     >
       { children }
     </ResultsContext.Provider>

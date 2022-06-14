@@ -23,8 +23,8 @@ const Results = () => {
     }
   }, [searchTerm, location.pathname]);
 
+  if (!searchTerm) return <div className="text-center text-lg">Please enter your search term!</div>
   if (isLoading) return <Loading />;
-
   switch (location.pathname) {
     case "/search":
       return (
@@ -48,7 +48,7 @@ const Results = () => {
       );
     case "/images":
       return (
-        <div className="flex flex-wrap justify-between">
+        <div className="flex flex-wrap justify-center">
           {results?.image_results?.map(({image, link: {href, title}}, index) => (
             <div className="m-2 w-40">
               <img src={image?.src} alt={title} loading="lazy" className="w-full"/>
