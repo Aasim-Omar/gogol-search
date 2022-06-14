@@ -90,7 +90,7 @@ const Results = () => {
         </div>
       );
     default:
-      return "ERROR!";
+      return <div className="text-center text-lg">ERROR! This page not found</div>;
   }
 };
 

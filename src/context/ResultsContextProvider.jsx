@@ -6,7 +6,7 @@ export const ResultsContextProvider = ({ children }) => {
   let [results, setResults] = useState([])
   let [searchTerm, setSearchTerm] = useState("")
   let [isLoading, setIsLoading] = useState(false)
-  let [darkTheme, setDarkTheme] = useState(false)
+  let [darkTheme, setDarkTheme] = useState(true)
 
   const baseUrl = 'https://google-search3.p.rapidapi.com/api/v1'
   const getResults = async (query) => {

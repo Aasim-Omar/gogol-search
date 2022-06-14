@@ -14,17 +14,16 @@ const Home = () => {
           {darkTheme ? <BsMoonStars /> : <BsFillBrightnessHighFill />}
         </p>
       <div className="flex flex-col justify-center items-center mb-36 w-full">
-        <h1 className="text-8xl mb-10">Gogol</h1>
+        <h1 className="text-8xl mb-10 font-display text-zinc-700 dark:text-zinc-200">Gogol</h1>
         <div className="flex border-2 w-80 md:w-2/5 overflow-hidden rounded-full border-zinc-400">
           <input
-            onChange={(e) => {
-              setSearchTerm(e.target.value);
-            }}
-            className="block border-none text-lg bg-gray-200 p-4 w-10/12 outline-none dark:bg-zinc-800"
+            onChange={(e) => { setSearchTerm(e.target.value); }}
+            className="block border-none text-lg bg-gray-200 p-4 w-full outline-none dark:bg-zinc-800"
+            placeholder="Search for anything"
             type="search"
           />
           <Link
-            className="block p-4 w-2/12 flex justify-center items-center bg-blue-300 dark:bg-zinc-500"
+            className="block p-4 w-16 flex justify-center items-center bg-blue-300 dark:bg-zinc-500"
             to="search"
           >
             🔎
